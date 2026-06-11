@@ -1,10 +1,16 @@
-# إخبار جيت هب باعتيار هذه المجلدات كملفات منشأة تلقائياً وتجاهلها في الإحصائيات
-android/* linguist-generated=true
-ios/* linguist-generated=true
-web/* linguist-generated=true
-windows/* linguist-generated=true
-macof/* linguist-generated=true
-linux/* linguist-generated=true
+# تجاهل تماماً مجلدات المنصات من إحصاء اللغات
+android/**/* linguist-generated=true
+ios/**/* linguist-generated=true
+web/**/* linguist-generated=true
+windows/**/* linguist-generated=true
+linux/**/* linguist-generated=true
+macos/**/* linguist-generated=true
 
-# التأكيد على أن لغة المشروع الأساسية هي دارت
+# تجاهل ملفات CMake و C++ تحديداً أينما وجدت في مجلدات البناء
+*.cpp linguist-generated=true
+*.h linguist-generated=true
+*.cmake linguist-generated=true
+CMakeLists.txt linguist-generated=true
+
+# إجبار جيت هب على إظهار الدارت كلغة أساسية وبحثها في كل مكان
 *.dart linguist-detectable=true
